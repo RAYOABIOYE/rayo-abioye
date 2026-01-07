@@ -72,6 +72,20 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #3FA9F588;
       }
+
+      @keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
     </style>
 <script type="importmap">
 {
