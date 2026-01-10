@@ -6,18 +6,18 @@ import {
   Rocket,
 } from 'lucide-react';
 
-import ParticleBackground from './components/ParticleBackground';
-import OrbitRings from './components/OrbitRings';
-import ProjectCard from './components/ProjectCard';
-import ProjectModal from './components/ProjectModal';
-import SkillsSection from './components/SkillsSection';
+import ParticleBackground from '../components/ParticleBackground';
+import OrbitRings from '../components/OrbitRings';
+import ProjectCard from '../components/ProjectCard';
+import ProjectModal from '../components/ProjectModal';
+import SkillsSection from '../components/SkillsSection';
 
-import { PROJECTS, PROCESS, SOCIALS } from './constants';
-import { Project } from './types';
+import { PROJECTS, PROCESS, SOCIALS } from '../constants';
+import { Project } from '../types';
 
-import HeroImage from './src/assets/rayo-hero.png';
+import HeroImage from '../assets/rayo-hero.png';
 
-const App: React.FC = () => {
+const Home: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   useEffect(() => {
@@ -156,26 +156,30 @@ const App: React.FC = () => {
               </div>
 
               <div>
-                <span className="text-neon-blue font-bold tracking-widest text-sm uppercase mb-4 block">
-                  The Mission
-                </span>
-                <h2 className="text-4xl md:text-5xl font-display font-bold mb-8">
-                  Crafting Digital Products with{' '}
-                  <span className="text-neon-blue italic">Intent.</span>
-                </h2>
+  <span className="text-neon-blue font-bold tracking-widest text-sm uppercase mb-4 block">
+    The Mission
+  </span>
 
-                <div className="space-y-6 text-lg text-body-text max-w-3xl">
-                  <p>
-                    I'm Motunrayo Abioye, known as “Rayo”. I work at the
-                    intersection of design and engineering — building systems,
-                    not just screens.
-                  </p>
-                  <p>
-                    From fintech to data-heavy platforms, I turn complexity into
-                    clarity with performance-driven UI.
-                  </p>
-                </div>
-              </div>
+  <h2 className="text-4xl md:text-5xl font-display font-bold mb-8">
+    Designing and Building Products that{' '}
+    <span className="text-neon-blue italic">Actually Work.</span>
+  </h2>
+
+  <div className="space-y-6 text-lg text-body-text max-w-3xl">
+    <p>
+      I’m Motunrayo Abioye — most people call me Rayo. I’m a product designer and
+      frontend engineer who enjoys turning ideas into clean, usable interfaces
+      people genuinely enjoy interacting with.
+    </p>
+
+    <p>
+      From e-commerce websites and dashboards to portfolios, media sites, and
+      custom client projects, I focus on building experiences that are clear,
+      responsive, and built to scale — whatever the product needs.
+    </p>
+  </div>
+</div>
+
             </div>
           </div>
         </div>
@@ -239,4 +243,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default Home;

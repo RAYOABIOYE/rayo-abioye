@@ -4,14 +4,23 @@ import { Figma, Code, Layout, TestTube, Zap, Palette, Github, Linkedin, Mail } f
 import { Project, Skill, ProcessStep } from './types';
 
 export const PROJECTS: Project[] = [
-  {
-    id: '1',
-    name: 'BeamAfrique',
-    role: 'Design & Frontend',
-    description: 'A logistics and shipment tracking platform for pan-African commerce.',
-    fullDetails: 'BeamAfrique required a seamless integration between a complex logistical dashboard and a user-friendly tracking interface. I designed the entire design system in Figma and implemented it using React, Tailwind, and Framer Motion for high-fidelity interactions.',
-    image: 'https://picsum.photos/seed/beam/800/600',
-    tags: ['React', 'Figma', 'Node.js', 'Logistics'],
+ {
+    id: 'uiux',
+    name: 'UI/UX & Product Design',
+    role: 'Product Designer · UI/UX',
+    description: 'A curated collection of my UI/UX and product design work across different digital products.',
+    fullDetails:
+      'This body of work represents my approach as a product designer and UI/UX designer. It includes interface design, user flows, wireframes, interaction design, and visual systems created for dashboards, websites, media platforms, portfolios, and custom client projects.',
+    image: 'https://picsum.photos/seed/uiux/800/600',
+    tags: [
+      'UI Design',
+      'UX Design',
+      'Product Design',
+      'Design Systems',
+      'Wireframing',
+      'Prototyping'
+    ],
+    caseStudyRoute: '/designs'
   },
   {
     id: '2',

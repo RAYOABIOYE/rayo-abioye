@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { X, ExternalLink } from 'lucide-react';
+import { useNavigate } from 'react-router-dom'; // ✅ Import useNavigate
 import { Project } from '../types';
 
 interface ProjectModalProps {
@@ -9,6 +9,8 @@ interface ProjectModalProps {
 }
 
 const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
+  const navigate = useNavigate(); // ✅ Initialize navigate
+
   if (!project) return null;
 
   return (
@@ -57,9 +59,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
               ))}
             </div>
 
-            <button className="flex items-center gap-2 px-6 py-3 bg-neon-blue text-space-dark font-bold rounded-xl hover:bg-white transition-all transform hover:scale-105">
-              View Live Case Study <ExternalLink size={18} />
+            {/* ✅ Corrected Navigation Button */}
+            <button
+              onClick={() => navigate(project.caseStudyRoute || '/designs')}
+              className="flex items-center gap-2 px-6 py-3 bg-neon-blue text-space-dark font-bold rounded-xl hover:bg-white transition-all transform hover:scale-105"
+            >
+              View Design Gallery <ExternalLink size={18} />
             </button>
+
           </div>
         </div>
       </div>
