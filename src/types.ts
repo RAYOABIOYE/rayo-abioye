@@ -1,13 +1,16 @@
-
+// src/types.ts
 export interface Project {
   id: string;
   name: string;
-  role: 'Design' | 'Frontend' | 'Design & Frontend';
+  slug: string;
+  role: string;
   description: string;
   fullDetails: string;
   image: string;
   tags: string[];
+  caseStudyRoute: string;
 }
+
 
 export interface Skill {
   name: string;

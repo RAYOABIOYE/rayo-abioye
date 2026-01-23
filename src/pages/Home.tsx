@@ -12,7 +12,10 @@ import ProjectCard from '../components/ProjectCard';
 import ProjectModal from '../components/ProjectModal';
 import SkillsSection from '../components/SkillsSection';
 
-import { PROJECTS, PROCESS, SOCIALS } from '../constants';
+// import { PROJECTS, PROCESS, SOCIALS } from '../constants';
+import { PROJECTS } from '../constants';
+
+
 import { Project } from '../types';
 
 import HeroImage from '../assets/rayo-hero.png';
@@ -167,7 +170,7 @@ const Home: React.FC = () => {
 
   <div className="space-y-6 text-lg text-body-text max-w-3xl">
     <p>
-      I’m Motunrayo Abioye — most people call me Rayo. I’m a product designer and
+      I’m Ubaidah Motunrayo Abioye — most people call me Rayo. I’m a product designer and
       frontend engineer who enjoys turning ideas into clean, usable interfaces
       people genuinely enjoy interacting with.
     </p>
@@ -192,15 +195,17 @@ const Home: React.FC = () => {
             Featured Projects
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {PROJECTS.map((project) => (
-              <ProjectCard
-                key={project.id}
-                project={project}
-                onClick={setSelectedProject}
-              />
-            ))}
-          </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+  {PROJECTS.map((project) => (
+    <ProjectCard
+      key={project.id}
+      project={project}
+      onClick={setSelectedProject}
+    />
+  ))}
+</div>
+
+
         </div>
       </section>
 

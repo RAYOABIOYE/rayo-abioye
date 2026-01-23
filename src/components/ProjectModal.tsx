@@ -59,13 +59,16 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
               ))}
             </div>
 
-            {/* ✅ Corrected Navigation Button */}
             <button
-              onClick={() => navigate(project.caseStudyRoute || '/designs')}
-              className="flex items-center gap-2 px-6 py-3 bg-neon-blue text-space-dark font-bold rounded-xl hover:bg-white transition-all transform hover:scale-105"
-            >
-              View Design Gallery <ExternalLink size={18} />
-            </button>
+  onClick={() => {
+    if (project.caseStudyRoute) navigate(project.caseStudyRoute);
+  }}
+  className="flex items-center gap-2 px-6 py-3 bg-neon-blue text-space-dark font-bold rounded-xl hover:bg-white transition-all transform hover:scale-105"
+>
+  View Design Gallery <ExternalLink size={18} />
+</button>
+
+
 
           </div>
         </div>
