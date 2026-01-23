@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom'; // <-- Import useNavigate
+import { X, ChevronLeft, ChevronRight, ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const TOTAL_IMAGES = 59;
@@ -25,6 +26,7 @@ const cardVariants = {
 
 const DesignGallery: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const navigate = useNavigate(); // <-- useNavigate hook
 
   const setActiveImage = (index: number) => setActiveIndex(index);
 
@@ -44,6 +46,15 @@ const DesignGallery: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-space-dark text-white px-6 md:px-12 py-24">
+      {/* ----- BACK BUTTON ----- */}
+      <button
+        onClick={() => navigate(-1)} // Go back to previous page
+        className="flex items-center mb-8 text-white/80 hover:text-white transition-colors"
+      >
+        <ArrowLeft size={20} className="mr-2" />
+        Back
+      </button>
+
       {/* Header */}
       <div className="max-w-5xl mx-auto mb-16 text-center md:text-left">
         <span className="text-neon-blue tracking-widest text-sm uppercase block mb-4">

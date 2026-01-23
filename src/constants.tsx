@@ -49,25 +49,25 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'jexcelhub',
-    name: 'JEXCELHUB',
+    name: 'E-COMMERCE',
     slug: 'jexcelhub',
     role: 'Frontend',
-    description: 'Data visualization and business intelligence tool for SME scaling.',
+    description: 'Data visualization and analytics platform for e-commerce growth and insights.',
     fullDetails:
-      'Built as a high-performance dashboard, JEXCELHUB transforms raw excel data into actionable insights. My focus was on technical implementation, ensuring 60fps performance even with large datasets using D3.js and React.',
+      'Built as a scalable e-commerce dashboard, this platform provides real-time insights into sales, inventory, and customer behavior. The focus was on creating an intuitive interface that allows businesses to track key metrics, monitor product performance, and optimize operations. Leveraging TypeScript and React, the application delivers smooth, high-performance interactions even with large product catalogs and heavy traffic data.',
     image: JExcel1, // default image
-    tags: ['D3.js', 'TypeScript', 'React', 'Data Viz'],
+    tags: ['Next.js', 'TypeScript', 'React', 'Data Viz'],
     caseStudyRoute: '/projects/jexcelhub',
     images: [JExcel1, JExcel2, JExcel3, JExcel4, JExcel5, JExcel6],
   },
  {
     id: 'consulting-website',
-    name: 'Consulting Website',
+    name: 'Project Hub',
     slug: 'consulting-website',
-    role: 'Design',
-    description: 'A premium portfolio for a high-end management consultant.',
+    role: 'Design & Development',
+    description: 'A versatile collection of projects across different domains and industries.',
     fullDetails:
-      'Focused heavily on "Silent Luxury" aesthetics. The design uses spacious layouts, serif typography, and subtle scroll-triggered reveals to convey authority and professionalism.',
+      'This project showcases diverse work, from design and development to creative and strategic initiatives. Each entry highlights its objectives, process, and outcomes, making it adaptable for any type of project or industry.',
     image: Consult1,
     tags: ['Product Thinking', 'UX/UI', 'Branding'],
     caseStudyRoute: '/projects/consulting-website',
@@ -84,7 +84,7 @@ export const PROJECTS: Project[] = [
     role: 'Design & Frontend',
     description: 'Curated collection of artist and developer portfolios.',
     fullDetails:
-      'A series of bespoke digital homes for creatives. Each site is tailored to the individual identity, ranging from brutalist minimalism to futuristic neon-tech.',
+      'A collection of digital projects for creatives. Each site reflects its unique identity, from minimalism to futuristic neon-tech.',
     image: Port1,
     tags: ['Creative Coding', 'A11y', 'SEO'],
     caseStudyRoute: '/projects/portfolio-sites',
@@ -102,7 +102,7 @@ export const SKILLS: Skill[] = [
   { name: 'Tailwind CSS', category: 'Frontend', icon: 'tailwind' },
   { name: 'Framer Motion', category: 'Frontend', icon: 'framer' },
   { name: 'Git/Github', category: 'Productivity', icon: 'git' },
-  { name: 'Agile/Scrum', category: 'Productivity', icon: 'agile' },
+  { name: 'Documentation', category: 'Productivity', icon: 'agile' },
 ];
 
 // ---------------- PROCESS ----------------

@@ -42,14 +42,14 @@ const Jexcelhub: React.FC = () => {
     <div className="min-h-screen bg-space-dark text-white px-6 md:px-12 py-24">
       {/* Header */}
       <div className="max-w-5xl mx-auto mb-16 text-center md:text-left">
-        <span className="text-neon-blue tracking-widest text-sm uppercase block mb-4">
-          Frontend · Data Visualization
+        <span className="text-gradient-neon tracking-widest text-sm uppercase block mb-4 font-bold">
+          Frontend · E-commerce Dashboard
         </span>
-        <h1 className="text-5xl md:text-6xl font-display font-bold mb-6 text-white drop-shadow-lg">
-          JEXCELHUB
+        <h1 className="text-6xl md:text-7xl font-display font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-pink drop-shadow-lg">
+          E-Commerce Insights
         </h1>
-        <p className="text-body-text text-lg max-w-3xl text-gray-300">
-          High-performance dashboard transforming raw Excel data into actionable insights. Built with React and D3.js for seamless interaction and smooth performance.
+        <p className="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed tracking-wide drop-shadow-sm">
+          A cutting-edge e-commerce platform providing real-time sales, inventory, and customer insights. Designed for smooth, high-performance interactions using React and TypeScript, even with large product catalogs and heavy traffic.
         </p>
       </div>
 
@@ -67,7 +67,7 @@ const Jexcelhub: React.FC = () => {
           >
             <img
               src={src}
-              alt={`JEXCELHUB ${index + 1}`}
+              alt={`E-Commerce ${index + 1}`}
               loading="lazy"
               className="w-full h-full object-cover rounded-3xl transition-transform duration-700 group-hover:scale-110 group-hover:brightness-110"
             />
@@ -111,7 +111,7 @@ const Jexcelhub: React.FC = () => {
           <motion.img
             key={activeImage}
             src={activeImage}
-            alt="JEXCELHUB preview"
+            alt="E-Commerce preview"
             className="max-w-full max-h-full rounded-xl shadow-2xl border border-neon-blue"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}

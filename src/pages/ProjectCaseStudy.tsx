@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { X, ChevronLeft, ChevronRight, ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { PROJECTS } from '../constants';
 
 const ProjectCaseStudy: React.FC = () => {
   const { slug } = useParams();
+  const navigate = useNavigate(); // <-- For back navigation
   const project = PROJECTS.find((p) => p.slug === slug);
 
   // Lightbox state
@@ -31,6 +32,15 @@ const ProjectCaseStudy: React.FC = () => {
 
   return (
     <section className="min-h-screen bg-space-dark text-white px-6 md:px-16 py-20">
+      {/* ----- BACK BUTTON ----- */}
+      <button
+        onClick={() => navigate(-1)} // Go back to previous page
+        className="flex items-center mb-8 text-white/80 hover:text-white transition-colors"
+      >
+        <ArrowLeft size={20} className="mr-2" />
+        Back
+      </button>
+
       <h1 className="text-5xl font-display font-bold mb-6">{project.name}</h1>
       <p className="max-w-2xl text-body-text mb-12">{project.fullDetails}</p>
 

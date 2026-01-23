@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import {
   ArrowRight,
   MousePointer2,
@@ -36,7 +37,7 @@ const Home: React.FC = () => {
       {/* ================= NAVIGATION ================= */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6 backdrop-blur-md bg-space-dark/20 border-b border-white/5">
         <div className="text-2xl font-display font-bold tracking-tighter">
-          RAYO<span className="text-neon-blue">.</span>
+          MOTUNRAYO<span className="text-neon-blue">.</span>
         </div>
 
         <div className="hidden md:flex items-center gap-8">
@@ -225,20 +226,83 @@ const Home: React.FC = () => {
               Open for frontend, design systems & creative web experiences.
             </p>
 
-            <a
-              href="mailto:hello@rayo.design"
-              className="px-10 py-5 bg-neon-blue text-space-dark font-bold rounded-2xl hover:scale-110 transition-all"
-            >
-              Start a conversation
-            </a>
+<Link
+  to="/contact"
+  className="relative z-30 inline-block px-12 py-5 bg-neon-blue text-space-dark font-bold rounded-3xl shadow-lg 
+             hover:scale-105 hover:shadow-2xl transition-transform duration-300"
+>
+  Start a Conversation
+</Link>
+
           </div>
         </div>
       </section>
 
-      {/* ================= FOOTER ================= */}
-      <footer className="py-12 border-t border-white/5 px-8 opacity-60">
-        © 2024 RAYO ABIOYE — DESIGNED & BUILT IN REACT.
-      </footer>
+{/* ================= FOOTER ================= */}
+<footer className="border-t border-white/10 bg-space-dark px-6 py-6">
+  <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
+
+    {/* Left — Name & Role */}
+    <div className="flex flex-col md:flex-row items-center gap-2">
+      <span className="font-bold text-white">Ubaidah Motunrayo Abioye</span>
+      <span>• Frontend Engineer & Product Designer <br/>[DesignEngineer]</span>
+    </div>
+
+    {/* Center — Socials */}
+    <div className="flex items-center gap-4">
+      {/* GitHub */}
+      <a
+        href="https://github.com/RAYOABIOYE/rayo-abioye"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white/50 hover:text-neon-blue transition"
+        aria-label="GitHub"
+      >
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.04c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.746.082-.73.082-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.305 3.492.998.108-.776.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.468-2.38 1.235-3.22-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.552 3.296-1.23 3.296-1.23.653 1.653.242 2.873.118 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.805 5.623-5.476 5.92.43.372.823 1.103.823 2.222v3.293c0 .322.218.694.825.576C20.565 21.796 24 17.297 24 12 24 5.37 18.627 0 12 0z"/>
+        </svg>
+      </a>
+
+      {/* Instagram */}
+      <a
+        href="https://www.instagram.com/techgirl_rayo?igsh=d3V3bm9oc2F3b25x"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white/50 hover:text-neon-pink transition"
+        aria-label="Instagram"
+      >
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M7.75 2h8.5C19.216 2 22 4.784 22 7.75v8.5C22 19.216 19.216 22 16.25 22h-8.5C4.784 22 2 19.216 2 16.25v-8.5C2 4.784 4.784 2 7.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.25-.88a1.13 1.13 0 11-2.26 0 1.13 1.13 0 012.26 0z"/>
+        </svg>
+      </a>
+
+      {/* TikTok */}
+      <a
+        href="https://www.tiktok.com/@techgirl_rayo?_r=1&_t=ZS-93IkKCpKs8m"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white/50 hover:text-white transition"
+        aria-label="TikTok"
+      >
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M21 8.04a7.17 7.17 0 01-4.17-1.35 7.14 7.14 0 01-2.2-2.7v9.8a6.75 6.75 0 11-6.75-6.75c.23 0 .46.02.68.05v3.43a3.32 3.32 0 10 2.9 3.3V2h3.38a7.18 7.18 0 006.16 6.04V8.04z"/>
+        </svg>
+      </a>
+    </div>
+
+    {/* Right — Phone */}
+    <div className="flex items-center gap-1">
+      <span>📞</span>
+      <a href="tel:+2348012345678" className="hover:text-neon-blue transition">
+        +234 816 632 7710
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+
+
 
       <ProjectModal
         project={selectedProject}
